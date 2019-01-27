@@ -1,0 +1,14 @@
+.card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-button {
+  margin-bottom: 20px;
+}
+
+.mat-card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
