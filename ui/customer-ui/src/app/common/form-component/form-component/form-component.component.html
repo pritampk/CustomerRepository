@@ -1,0 +1,38 @@
+<div class="form-class">
+  <mat-card>
+    <mat-card-header class="form-header">
+      <mat-card-title>Enter Customer Details</mat-card-title>
+    </mat-card-header>
+
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Name" />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Age" value="obj.age" />
+      </mat-form-field>
+
+      <mat-radio-group>
+        <label class="example-margin">Sex: </label>
+        <mat-radio-button value="obj.sex">Male</mat-radio-button>
+        <mat-radio-button value="famale">Female</mat-radio-button>
+      </mat-radio-group>
+
+      <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="obj.address"></textarea>
+      </mat-form-field>
+
+      <div class="example-button-row form-header">
+        <button mat-raised-button color="primary">Submit</button>
+      </div>
+    </form>
+  </mat-card>
+</div>
+<div class="back-button">
+  <div class="example-button-row ">
+    <button mat-raised-button color="primary" (click)="routingToTable()">
+      Go To Back
+    </button>
+  </div>
+</div>

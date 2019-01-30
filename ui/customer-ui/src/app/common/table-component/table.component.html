@@ -2,14 +2,19 @@
   <mat-card>
     <mat-card-header>
       <mat-card-title>Customer Table</mat-card-title>
-      <button mat-raised-button color="primary" class="add-button">
+      <button
+        mat-raised-button
+        color="primary"
+        class="add-button"
+        (click)="routingToForm()"
+      >
         Add Customer
       </button>
     </mat-card-header>
     <mat-card-content>
-      <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <mat-table [dataSource]="dataSource1" class="mat-elevation-z8">
         <ng-container matColumnDef="id">
-          <mat-header-cell *matHeaderCellDef> Id. </mat-header-cell>
+          <mat-header-cell *matHeaderCellDef> Id </mat-header-cell>
           <mat-cell *matCellDef="let element"> {{ element.id }} </mat-cell>
         </ng-container>
 

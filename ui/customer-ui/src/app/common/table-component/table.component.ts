@@ -1,4 +1,6 @@
 import { Component } from "@angular/core";
+import { Router } from "@angular/router";
+import { DataService } from "../../data.service";
 
 @Component({
   selector: "app-table",
@@ -6,15 +8,10 @@ import { Component } from "@angular/core";
   styleUrls: ["./table.component.css"]
 })
 export class TableComponent {
+  constructor(private route: Router, private dataservice: DataService) {}
   displayedColumns: string[] = ["id", "name", "age", "gender", "address"];
-  dataSource = [
-    {
-      id: 1,
-      name: "Rajat",
-      age: 25,
-      gender: "Male",
-      address: "BTM layout 1st Stage"
-    },
-    { id: 2, name: "Pritam", age: 25, gender: "Male", address: "Roopena Agara" }
-  ];
+  dataSource1 = this.dataservice.dataSource;
+  routingToForm() {
+    this.route.navigate(["form"]);
+  }
 }
