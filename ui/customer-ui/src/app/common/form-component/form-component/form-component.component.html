@@ -6,25 +6,32 @@
 
     <form class="example-form">
       <mat-form-field class="example-full-width">
-        <input matInput placeholder="Name" />
+        <input matInput placeholder="Name" [(ngModel)]="obj.name" name="Name" />
       </mat-form-field>
 
       <mat-form-field class="example-full-width">
-        <input matInput placeholder="Age" value="obj.age" />
+        <input matInput placeholder="Age" [(ngModel)]="obj.age" name="Age" />
       </mat-form-field>
 
-      <mat-radio-group>
-        <label class="example-margin">Sex: </label>
-        <mat-radio-button value="obj.sex">Male</mat-radio-button>
-        <mat-radio-button value="famale">Female</mat-radio-button>
+      <mat-radio-group [(ngModel)]="obj.gender" name="Gender">
+        <label class="example-margin">Gender: </label>
+        <mat-radio-button value="Male">Male</mat-radio-button>
+        <mat-radio-button value="female">Female</mat-radio-button>
       </mat-radio-group>
 
       <mat-form-field class="example-full-width">
-        <textarea matInput placeholder="obj.address"></textarea>
+        <textarea
+          matInput
+          placeholder="Enter your address"
+          [(ngModel)]="obj.address"
+          name="address"
+        ></textarea>
       </mat-form-field>
 
       <div class="example-button-row form-header">
-        <button mat-raised-button color="primary">Submit</button>
+        <button mat-raised-button color="primary" (click)="submitData()">
+          Submit
+        </button>
       </div>
     </form>
   </mat-card>

@@ -10,10 +10,16 @@ export class DataService {
     {
       id: 1,
       name: "Rajat",
-      age: 25,
+      age: "25",
       gender: "Male",
       address: "BTM layout 1st Stage"
     },
-    { id: 2, name: "Pritam", age: 25, gender: "Male", address: "Roopena Agara" }
+    {
+      id: 2,
+      name: "Pritam",
+      age: "25",
+      gender: "Male",
+      address: "Roopena Agara"
+    }
   ];
 }

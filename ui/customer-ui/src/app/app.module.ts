@@ -6,7 +6,9 @@ import { MatCardModule } from "@angular/material/card";
 import { MatButtonModule } from "@angular/material/button";
 import { MatInputModule } from "@angular/material/input";
 import { MatRadioModule } from "@angular/material/radio";
+import { FormsModule } from "@angular/forms";
 import { AppRoutingModule } from "./app-routing.module";
+import { HttpClientModule } from "@angular/common/http";
 import { AppComponent } from "./app.component";
 import { TableComponent } from "../app/common/table-component/table.component";
 import { DataService } from "./data.service";
@@ -23,6 +25,8 @@ import { FormComponentComponent } from "./common/form-component/form-component/f
     MatButtonModule,
     MatInputModule,
     MatRadioModule,
+    FormsModule,
+    HttpClientModule,
     BrowserAnimationsModule
   ],
   providers: [DataService],
